@@ -17,8 +17,6 @@ if(player.innerText === 'X'){
   arr[move] = 'O'
   }
 
-  console.log(arr);
-
   let sq1 = arr[0]
   let sq2 = arr[1]
   let sq3 = arr[2]
@@ -50,7 +48,7 @@ if(player.innerText === 'X'){
   else if(sq1 !== undefined && sq1 === sq5 && sq1 === sq9){
     window.alert(`${sq1} Won!`)
   }
-  else if(sq3 !== undefined && sq3 === sq5 && sq3 === sq7){
+  else if(sq7 !== undefined && sq7 === sq5 && sq7 === sq3){
     window.alert(`${sq3} Won!`)
   }
 
@@ -61,9 +59,17 @@ if(player.innerText === 'X'){
     }
   }
   if(cats === true){
-    window.alert('Cats Game mutha trucka!')
+    window.alert('Cats Game')
   }
 };
+
+function reset(){
+  let element;
+  for(let i = 0; i <= 8; i++){
+    element = document.getElementById(i)
+    element.innerText = '';
+  }
+}
 
 
 
